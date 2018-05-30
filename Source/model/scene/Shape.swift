@@ -37,7 +37,7 @@ open class Shape: Node {
         self.fillVar.node = self
     }
 
-    override internal func bounds() -> Rect? {
+    override public func bounds() -> Rect? {
         var bounds = form.bounds()
 
         if let shapeStroke = self.stroke {

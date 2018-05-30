@@ -60,7 +60,7 @@ open class Text: Node {
         )
     }
 
-    override internal func bounds() -> Rect {
+    override public func bounds() -> Rect {
         let font: MFont
         if let f = self.font {
 
