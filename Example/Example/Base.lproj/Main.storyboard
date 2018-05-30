@@ -171,6 +171,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S6Z-eE-IU3">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="c9z-TU-6jb"/>
+                                    <constraint firstAttribute="height" constant="128" id="nap-6C-veN"/>
+                                </constraints>
+                            </imageView>
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="yHP-DJ-SIl" customClass="SVGView" customModule="Macaw">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -178,13 +185,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="S6Z-eE-IU3" firstAttribute="centerX" secondItem="anZ-To-3Vj" secondAttribute="centerX" id="3DD-4F-93T"/>
                             <constraint firstItem="yHP-DJ-SIl" firstAttribute="leading" secondItem="anZ-To-3Vj" secondAttribute="leading" id="9B2-8Y-fqt"/>
                             <constraint firstItem="Ohj-O3-2uP" firstAttribute="top" secondItem="yHP-DJ-SIl" secondAttribute="bottom" id="Bbb-lx-2bx"/>
+                            <constraint firstItem="S6Z-eE-IU3" firstAttribute="centerY" secondItem="anZ-To-3Vj" secondAttribute="centerY" id="Cco-ba-9OH"/>
                             <constraint firstAttribute="trailing" secondItem="yHP-DJ-SIl" secondAttribute="trailing" id="UKX-TL-nbb"/>
                             <constraint firstItem="yHP-DJ-SIl" firstAttribute="top" secondItem="TsH-he-yyr" secondAttribute="bottom" id="tzO-cY-rQ9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="S6Z-eE-IU3" id="v5h-bu-xKS"/>
                         <outlet property="svgView" destination="yHP-DJ-SIl" id="JDo-NA-VIx"/>
                     </connections>
                 </viewController>

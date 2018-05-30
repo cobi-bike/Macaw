@@ -14,10 +14,12 @@ class SVGExampleViewController: UIViewController {
 
     var fileName: String?
     
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        svgView.fileName = fileName
+        let image = UIImage(SVGFile: "tiger", bundle: Bundle.main, maxSize: CGSize(width: 100, height: 100))
+        imageView.image = image
     }
 
     override func didReceiveMemoryWarning() {
